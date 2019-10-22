@@ -9,8 +9,13 @@ public class AnnotationDemoApp {
 		// read spring config file
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 //get the bean ID 
-		Coach thecoach= context.getBean("thatSillyCoach",Coach.class);
+		Coach thecoach= context.getBean("tennisCoach",Coach.class);
+		//call a method on the bean
 		System.out.println(thecoach.getDailyWorkout());
+		//call method to get the daily fortune
+		System.out.println(thecoach.getDailyFortune());
+		
+		
 		context.close();
 	}
 
